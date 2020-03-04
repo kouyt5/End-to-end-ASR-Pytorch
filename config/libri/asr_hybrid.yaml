@@ -5,7 +5,7 @@ data:
     train_split: ['train-clean-100'] # Name of data splits to be used as training set ,'train-clean-360'
     dev_split: ['dev-clean']              # Name of data splits to be used as validation set
     bucketing: True                       # Enable/Disable bucketing 
-    batch_size: 16
+    batch_size: 32
   audio:                                  # Attributes of audio feature
     feat_type: 'fbank'
     feat_dim:  40
@@ -20,7 +20,7 @@ data:
     vocab_file: 'tests/sample_data/subword-16k.model'
 
 hparas:                                   # Experiment hyper-parameters
-  valid_step: 5000
+  valid_step: 500
   max_step: 1000001
   tf_start: 1.0
   tf_end: 1.0
